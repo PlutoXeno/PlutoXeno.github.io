@@ -1,0 +1,275 @@
+<HTML>
+<HEAD>
+<HTA:APPLICATION ID="sample"
+    APPLICATIONNAME="sample"
+    BORDER="dialog"
+    MAXIMIZEBUTTON="no"
+    SCROLLFLAT="yes"
+    CAPTION="yes"
+    SELECTION="no"
+    INNERBORDER="no"
+    ICON=""
+    SCROLL="no"
+    SHOWINTASKBAR="no"
+    SINGLEINSTANCE="yes"
+    SYSMENU="yes"
+    WINDOWSTATE="normal" />
+
+<TITLE>Test</TITLE>
+<SCRIPT language="JavaScript">
+window.resizeTo(480,480);
+
+function closeHTA(reply){
+   var fso = new ActiveXObject("Scripting.FileSystemObject");
+   fso.GetStandardStream(1).WriteLine(reply);
+   window.close();
+}
+
+</SCRIPT>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container { 
+  border:2px solid #ccc; 
+  width:100%; 
+  height:25%; 
+  overflow-y: scroll; }
+
+</style>
+
+</HEAD>
+<BODY>
+
+<div style="background-color:#aaa; padding:10px;">
+<label for="Name">Name:</label>
+<input type="text" value="" size="15" id="Name" name="Name">
+<br />
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+<fieldset style="padding:5px;">
+<legend>Info:</legend>
+<label for="races">Race---</label>
+<select id="races" name="races">
+    <option value="001"></option>
+    <option value="002">Human</option>
+    <option value="003">Not Human</option>
+</select>
+<br />
+<label for="gender">Gender-</label>
+<select id="gender" name="gender">
+    <option value="001"></option>
+    <option value="002">Male</option>
+    <option value="003">Female</option>
+    <option value="004">Other</option>
+</select>
+<br />
+</fieldset>
+
+<fieldset style="padding:5px;">
+<legend>Stats:</legend>
+<label for="str">Strength----</label>
+<select id="str" name="str">
+    <option value="001">1</option>
+    <option value="002">2</option>
+    <option value="003">3</option>
+    <option value="004">4</option>
+    <option value="005">5</option>
+    <option value="006">6</option>
+    <option value="007">7</option>
+    <option value="008">8</option>
+    <option value="009">9</option>
+    <option value="010">10</option>
+    <option value="011">11</option>
+    <option value="012">12</option>
+    <option value="013">13</option>
+    <option value="014">14</option>
+    <option value="015">15</option>
+    <option value="016">16</option>
+    <option value="017">17</option>
+    <option value="018">18</option>
+    <option value="019">19</option>
+    <option value="020">20</option>
+</select>
+<br />
+<label for="dex">Dexterity----</label>
+<select id="dex" name="dex">
+    <option value="001">1</option>
+    <option value="002">2</option>
+    <option value="003">3</option>
+    <option value="004">4</option>
+    <option value="005">5</option>
+    <option value="006">6</option>
+    <option value="007">7</option>
+    <option value="008">8</option>
+    <option value="009">9</option>
+    <option value="010">10</option>
+    <option value="011">11</option>
+    <option value="012">12</option>
+    <option value="013">13</option>
+    <option value="014">14</option>
+    <option value="015">15</option>
+    <option value="016">16</option>
+    <option value="017">17</option>
+    <option value="018">18</option>
+    <option value="019">19</option>
+    <option value="020">20</option>
+</select>
+<br />
+<label for="con">Constitution-</label>
+<select id="con" name="con">
+    <option value="001">1</option>
+    <option value="002">2</option>
+    <option value="003">3</option>
+    <option value="004">4</option>
+    <option value="005">5</option>
+    <option value="006">6</option>
+    <option value="007">7</option>
+    <option value="008">8</option>
+    <option value="009">9</option>
+    <option value="010">10</option>
+    <option value="011">11</option>
+    <option value="012">12</option>
+    <option value="013">13</option>
+    <option value="014">14</option>
+    <option value="015">15</option>
+    <option value="016">16</option>
+    <option value="017">17</option>
+    <option value="018">18</option>
+    <option value="019">19</option>
+    <option value="020">20</option>
+</select>
+<br />
+<label for="int">Intelligence--</label>
+<select id="int" name="int">
+    <option value="001">1</option>
+    <option value="002">2</option>
+    <option value="003">3</option>
+    <option value="004">4</option>
+    <option value="005">5</option>
+    <option value="006">6</option>
+    <option value="007">7</option>
+    <option value="008">8</option>
+    <option value="009">9</option>
+    <option value="010">10</option>
+    <option value="011">11</option>
+    <option value="012">12</option>
+    <option value="013">13</option>
+    <option value="014">14</option>
+    <option value="015">15</option>
+    <option value="016">16</option>
+    <option value="017">17</option>
+    <option value="018">18</option>
+    <option value="019">19</option>
+    <option value="020">20</option>
+</select>
+<br />
+<label for="wis">Wisdom----</label>
+<select id="wis" name="wis">
+    <option value="001">1</option>
+    <option value="002">2</option>
+    <option value="003">3</option>
+    <option value="004">4</option>
+    <option value="005">5</option>
+    <option value="006">6</option>
+    <option value="007">7</option>
+    <option value="008">8</option>
+    <option value="009">9</option>
+    <option value="010">10</option>
+    <option value="011">11</option>
+    <option value="012">12</option>
+    <option value="013">13</option>
+    <option value="014">14</option>
+    <option value="015">15</option>
+    <option value="016">16</option>
+    <option value="017">17</option>
+    <option value="018">18</option>
+    <option value="019">19</option>
+    <option value="020">20</option>
+</select>
+<br />
+<label for="cha">Charisma---</label>
+<select id="cha" name="cha">
+    <option value="001">1</option>
+    <option value="002">2</option>
+    <option value="003">3</option>
+    <option value="004">4</option>
+    <option value="005">5</option>
+    <option value="006">6</option>
+    <option value="007">7</option>
+    <option value="008">8</option>
+    <option value="009">9</option>
+    <option value="010">10</option>
+    <option value="011">11</option>
+    <option value="012">12</option>
+    <option value="013">13</option>
+    <option value="014">14</option>
+    <option value="015">15</option>
+    <option value="016">16</option>
+    <option value="017">17</option>
+    <option value="018">18</option>
+    <option value="019">19</option>
+    <option value="020">20</option>
+</select>
+<br />
+</fieldset>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+<div class="container">
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+</div>
+<div class="container">
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+    <input type="checkbox" /> This is checkbox <br />
+</div>
+  </div>
+</div>
+
+<div style="background-color:#aaa; padding:10px; align:bottom;">
+<p align="right">
+<input type="text" value="" size="15" id="Secret" name="Secret">
+<input type="button" id="Help" name="Help" value="Help">
+<input type="button" id="Cancel" name="Cancel" value="Cancel">
+<input type="button" id="Finish" name="Finish" value="Finish">
+</p>
+</div>
+
+</BODY>
+</HTML>
+
